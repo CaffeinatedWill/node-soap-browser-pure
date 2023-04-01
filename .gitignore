@@ -8,3 +8,5 @@ yarn.lock
 *.iml
 /lib
 /docs
+yarn-error.log
+

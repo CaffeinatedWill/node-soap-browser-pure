@@ -11,7 +11,11 @@ module.exports = {
     libraryTarget: 'commonjs2',
     path: path.resolve(__dirname, 'dist'),
   },
-  plugins: [ new NodePolyfillPlugin(),  new webpack.ProvidePlugin({process: 'process/browser',Buffer: ['buffer', 'Buffer']})],
+  plugins: [
+	new NodePolyfillPlugin(),
+	new webpack.ProvidePlugin({process: 'process/browser',Buffer: ['buffer', 'Buffer']}),
+	new webpack.optimize.LimitChunkCountPlugin({maxChunks: 1})
+],
   resolve: {
   fallback: {
     "fs": require.resolve("browserify-fs"),

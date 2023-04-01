@@ -1,3 +1,30 @@
+# @CaffeinatedWill here - just run `yarn run build`
+
+Create a typescript class to act as the object wrapper with the below 
+
+
+**SoapObject.ts**
+```
+import 'soap';
+let soapObject = caffeine.soap;
+export default soapObject;
+```
+
+then
+
+```
+import soap from './SoapObject'
+
+
+soap.createClient('http://......');
+```
+
+
+
+
+---
+
+
 # Soap [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Gitter chat][gitter-image]][gitter-url]
 
 > A SOAP client and server for node.js.
